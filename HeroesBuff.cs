@@ -5,6 +5,7 @@ using HeroesBuff;
 using Il2CppAssets.Scripts.Models;
 using System;
 using Il2CppAssets.Scripts.Models.Towers;
+using Il2CppAssets.Scripts.Data.Behaviors.Towers;
 
 [assembly: MelonInfo(typeof(HeroesBuff.HeroesBuff), ModHelperData.Name, ModHelperData.Version, ModHelperData.RepoOwner)]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
@@ -27,6 +28,7 @@ public class HeroesBuff : BloonsTD6Mod
             if (hero.IsHero())
             {
                 if (hero.baseId == "Sauda") SaudaBuff(hero);
+                if (hero.baseId == "Benjamin") BenjaminBuff(hero);
             }
         }
     }
@@ -46,6 +48,15 @@ public class HeroesBuff : BloonsTD6Mod
         hero.GetAttackModel().weapons[0].Rate /= rateMultiplier;
 
         if (hero.tier >= 3) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().immuneBloonProperties = Il2Cpp.BloonProperties.None;
+
+        ModHelper.Msg<HeroesBuff>("Buffing " + hero.baseId + "...");
+        return;
+    }
+
+    public void BenjaminBuff(TowerModel hero)
+    {
+        hero.cost -= 400;
+        hero.GetBehavior<Il2CppAssets.Scripts.Models.Towers.Behaviors.PerRoundCashBonusTowerModel>().cashPerRound *= 2.5f;
 
         ModHelper.Msg<HeroesBuff>("Buffing " + hero.baseId + "...");
         return;

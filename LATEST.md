@@ -1,1 +1,1 @@
-Esse mod adiciona buffs aos seguintes heróis : Sauda.
+Esse mod adiciona buffs aos seguintes heróis : Sauda, Benjamin.
