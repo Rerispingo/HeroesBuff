@@ -1,1 +1,1 @@
-This mod adds a buff to all heroes, and an extra buff to Sauda.
+Esse mod adiciona buffs aos seguintes heróis : Sauda.

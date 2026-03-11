@@ -4,6 +4,7 @@ using BTD_Mod_Helper;
 using HeroesBuff;
 using Il2CppAssets.Scripts.Models;
 using System;
+using Il2CppAssets.Scripts.Models.Towers;
 
 [assembly: MelonInfo(typeof(HeroesBuff.HeroesBuff), ModHelperData.Name, ModHelperData.Version, ModHelperData.RepoOwner)]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
@@ -21,40 +22,32 @@ public class HeroesBuff : BloonsTD6Mod
     {
         for (int i=0; i < result.towers.Count; i++)
         {
-            var hero = result.towers[i];
+            TowerModel hero = result.towers[i];
 
             if (hero.IsHero())
             {
-                ModHelper.Msg<HeroesBuff>("Buffing " + hero.baseId + "...");
-                // Sauda Modifications
-                if (hero.baseId == "Sauda")
-                {
-                    float damageMultiplier = 25f + (5f * hero.tier);
-                    float rateMultiplier = 2f + (0.5f * hero.tier);
-
-                    hero.range *= 1.2f;
-                    hero.GetAttackModel().range *= 1.2f;
-
-                    hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage *= damageMultiplier;
-                    hero.GetAttackModel().weapons[0].Rate /= rateMultiplier;
-                    hero.GetAttackModel().weapons[0].projectile.pierce *= damageMultiplier;
-
-                    hero.GetAttackModel().weapons[0].projectile.GetDamageModel().immuneBloonProperties = Il2Cpp.BloonProperties.None;
-                }else
-                {
-                    try
-                    {
-                        hero.range *= 1.2f;
-                        hero.GetAttackModel().range *= 1.2f;
-                        hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage *= 1.2f;
-                        hero.GetAttackModel().weapons[0].Rate /= 1.2f;
-                        hero.GetAttackModel().weapons[0].projectile.pierce *= 1.2f;
-                    }
-                    catch (Exception) {}
-                }
+                if (hero.baseId == "Sauda") SaudaBuff(hero);
             }
         }
     }
 
+    public void SaudaBuff(TowerModel hero)
+    {
+        float damageMultiplier = 1f + (0.1f * hero.tier);
+        float rateMultiplier = 1f + (0.1f * hero.tier);
 
+        hero.range *= 1.2f;
+        hero.GetAttackModel().range *= 1.2f;
+        
+        if (hero.tier >= 10) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 2;
+        if (hero.tier >= 20) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 2;
+        
+        hero.GetAttackModel().weapons[0].projectile.pierce += 2;
+        hero.GetAttackModel().weapons[0].Rate /= rateMultiplier;
+
+        if (hero.tier >= 3) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().immuneBloonProperties = Il2Cpp.BloonProperties.None;
+
+        ModHelper.Msg<HeroesBuff>("Buffing " + hero.baseId + "...");
+        return;
+    }
 }
