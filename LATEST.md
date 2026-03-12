@@ -1,1 +1,1 @@
-Esse mod adiciona buffs aos seguintes heróis : Sauda, Benjamin.
+This mod improves the core mechanics of each hero (Sauda, Quincy and Benjamin only for now).

@@ -7,7 +7,18 @@ public static class ModHelperData
     public const string Name = "HeroesBuff";
 
     public const string Description = """
-    This mod adds a buff to all heroes.
+    This mod improves the core mechanics of each hero (Sauda, Quincy and Benjamin only for now).
+
+    ## Quincy Buffs :
+    - Range increased by 25% on all levels
+    - Damage increased by 1 at Level 5
+    - Damage increased by 2 at Level 10
+    - Damage increased by 2 at Level 15
+    - Pierce increased by 2 at Level 2
+    - Pierce increased by 2 at Level 9
+    - Pierce increased by 3 at Level 20
+    - Quincy shoots +1 extra arrow at Level 10
+    - Quincy can pop Lead and Frozen Bloons at Level 5
 
     ## Sauda Buffs : 
     - Range increased by 20% on all levels
