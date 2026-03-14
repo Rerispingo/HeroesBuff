@@ -3,13 +3,13 @@ This mod improves the core mechanics of each hero (Sauda, Quincy and Benjamin on
 
 ## Quincy Buffs :
 - Range increased by 40% on all levels
-- Damage increased by 1 at Level 5
+- Damage increased by 1 at Level 4
 - Damage increased by 1 at Level 10
-- Damage increased by 1 at Level 15
+- Damage increased by 2 at Level 15
 - Pierce increased by 1 at Level 2
 - Pierce increased by 2 at Level 9
-- Pierce increased by 2 at Level 20
-- Quincy can pop Lead and Frozen Bloons at Level 5
+- Pierce increased by 2 at Level 15
+- Quincy can pop Lead and Frozen Bloons at Level 4
 
 ## Sauda Buffs : 
 - Range increased by 20% on all levels

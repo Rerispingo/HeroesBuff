@@ -40,15 +40,15 @@ public class HeroesBuff : BloonsTD6Mod
         hero.range *= 1.4f;
         hero.GetAttackModel().range *= 1.4f;
 
-        if (hero.tier >= 5) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 1;
+        if (hero.tier >= 4) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 1;
         if (hero.tier >= 10) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 1;
-        if (hero.tier >= 15) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 1;
+        if (hero.tier >= 15) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 2;
 
         if (hero.tier >= 2) hero.GetAttackModel().weapons[0].projectile.pierce += 1;
         if (hero.tier >= 9) hero.GetAttackModel().weapons[0].projectile.pierce += 2;
-        if (hero.tier >= 20) hero.GetAttackModel().weapons[0].projectile.pierce += 2;
+        if (hero.tier >= 15) hero.GetAttackModel().weapons[0].projectile.pierce += 2;
 
-        if (hero.tier >= 5) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().immuneBloonProperties = Il2Cpp.BloonProperties.None;
+        if (hero.tier >= 4) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().immuneBloonProperties = Il2Cpp.BloonProperties.None;
 
         if (hero.tier == 20) ModHelper.Msg<HeroesBuff>("Buffing " + hero.baseId + "...");
         return;
@@ -58,8 +58,8 @@ public class HeroesBuff : BloonsTD6Mod
     {
         float rateMultiplier = 1f + (0.1f * hero.tier);
 
-        hero.range *= 1.2f;
-        hero.GetAttackModel().range *= 1.2f;
+        hero.range *= 1.25f;
+        hero.GetAttackModel().range *= 1.25f;
         
         if (hero.tier >= 10) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 2;
         if (hero.tier >= 20) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 2;
@@ -75,7 +75,7 @@ public class HeroesBuff : BloonsTD6Mod
 
     public void BenjaminBuff(TowerModel hero)
     {
-        hero.cost -= 400;
+        hero.cost -= 450;
         hero.GetBehavior<Il2CppAssets.Scripts.Models.Towers.Behaviors.PerRoundCashBonusTowerModel>().cashPerRound *= 2.5f;
 
         if (hero.tier == 20) ModHelper.Msg<HeroesBuff>("Buffing " + hero.baseId + "...");
