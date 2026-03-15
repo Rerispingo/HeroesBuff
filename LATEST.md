@@ -1,1 +1,1 @@
-This mod improves the core mechanics of each hero (Sauda, Quincy and Benjamin only for now).
+This mod improves the heroes (Sauda, Quincy and Benjamin only for now).
