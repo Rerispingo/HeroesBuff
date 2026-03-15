@@ -1,16 +1,14 @@
-# Bug Fixes :
-- Fixed an issue with the in-game Mod Helper failing to detect the mod's version
-
 # Changes : 
 
-## Sauda :
-Sauda received buffs to the “Leaping Sword” ability and general nerfs to balance things out
+## Quincy :
+Quincy has received buffs to his “Rapid Shot” and “Storm of Arrows” abilities, as well as increased range; and general nerfs to balance the game
 
-- Range bonus reduced to 20% (previously 25%)
-- Pierce reduced to 1 (previously 2)
-- The bonus for popping Lead and Frozen Bloons on Level 3 has been removed
-### Leaping Sword Ability Buffs :
-- Cooldown reduced by 50%
-- Impact damage increased by 400%
-- Ongoing damage increased by 100%
-- Ability duration increased by 50%
+- Damage bonus removed at level 10 (was +1)
+- Penetration bonus removed at level 9 (was +2)
+- Ability to pop lead and frozen bloons moved to level 5 (was level 4)
+- Range bonus increased to 50% (previously 40%)
+- At level 15, the range bonus is increased to 75%
+### Rapid Shot Ability:
+- Cooldown reduced by 33%
+### Storm of Arrows Ability:
+- Damage increased by 150%

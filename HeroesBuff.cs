@@ -27,35 +27,65 @@ public class HeroesBuff : BloonsTD6Mod
     }
 
     public override void OnNewGameModel(GameModel result)
-    {
+    {   
+        //Heroes Buff
         for (int i=0; i < result.towers.Count; i++)
         {
             TowerModel hero = result.towers[i];
-
-            if (hero.IsHero())
+            switch (hero.baseId)
             {
-                if (hero.baseId == "Quincy") QuincyBuff(hero);
-                if (hero.baseId == "Sauda") SaudaBuff(hero);
-                if (hero.baseId == "Benjamin") BenjaminBuff(hero);
+                case "Quincy":
+                    QuincyBuff(hero);
+                    break;
+                case "Sauda":
+                    SaudaBuff(hero);
+                    break;
+                case "Benjamin":
+                    BenjaminBuff(hero);
+                    break;
+                default:
+                    break;
             }
         }
     }
 
     public void QuincyBuff(TowerModel hero)
     {
-        hero.range *= 1.4f;
-        hero.GetAttackModel().range *= 1.4f;
+        if (hero.tier >= 15)
+        {
+            hero.range *= 1.75f;
+            hero.GetAttackModel().range *= 1.75f;
+        }else
+        {
+            hero.range *= 1.5f;
+            hero.GetAttackModel().range *= 1.5f;
+        }
 
         if (hero.tier >= 4) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 1;
-        if (hero.tier >= 10) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 1;
         if (hero.tier >= 15) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 2;
 
         if (hero.tier >= 2) hero.GetAttackModel().weapons[0].projectile.pierce += 1;
-        if (hero.tier >= 9) hero.GetAttackModel().weapons[0].projectile.pierce += 2;
         if (hero.tier >= 15) hero.GetAttackModel().weapons[0].projectile.pierce += 2;
 
-        if (hero.tier >= 4) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().immuneBloonProperties = Il2Cpp.BloonProperties.None;
+        if (hero.tier >= 5) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().immuneBloonProperties = Il2Cpp.BloonProperties.None;
 
+        //Rapid Shot Ability Buffs
+        if (hero.tier >= 3)
+        {
+            var rapidShotAbility = hero.GetBehavior<AbilityModel>("AbilityModel_RapidShotAbility");
+            rapidShotAbility.Cooldown += 0.66f;
+        }
+        // Storm of Arrows Ability Buffs
+        if (hero.tier >= 10)
+        {
+            var SOAAbility = hero.GetBehavior<AbilityModel>("AbilityModel_StormOfArrowsAbility");
+            var SOAProjectile = SOAAbility.GetBehavior<ActivateAttackModel>().attacks[0].weapons[0].projectile;
+            var SOADamageModel = SOAProjectile.GetBehavior<CreateProjectileOnExhaustFractionModel>().projectile.GetDamageModel();
+
+            SOADamageModel.damage *= 2.5f;
+        }
+
+        // Buff confirmation
         if (hero.tier == 20) ModHelper.Msg<HeroesBuff>("Buffing " + hero.baseId + "...");
         return;
     }
@@ -73,9 +103,7 @@ public class HeroesBuff : BloonsTD6Mod
         hero.GetAttackModel().weapons[0].projectile.pierce += 1;
         hero.GetAttackModel().weapons[0].Rate /= rateMultiplier;
 
-        if (hero.tier == 20) ModHelper.Msg<HeroesBuff>("Buffing " + hero.baseId + "...");
-
-        //Leaping Sword Attack Buffs
+        //Leaping Sword Ability Buffs
         if (hero.tier >= 3)
         {
             var leapingSwordAbility = hero.GetBehavior<AbilityModel>("AbilityModel_LeapingSword");
@@ -97,6 +125,8 @@ public class HeroesBuff : BloonsTD6Mod
             lsDotAgeModel.Lifespan *= 1.5f;
         }
 
+        // Buff confirmation
+        if (hero.tier == 20) ModHelper.Msg<HeroesBuff>("Buffing " + hero.baseId + "...");
         return;
     }
 
@@ -105,6 +135,7 @@ public class HeroesBuff : BloonsTD6Mod
         hero.cost -= 450;
         hero.GetBehavior<Il2CppAssets.Scripts.Models.Towers.Behaviors.PerRoundCashBonusTowerModel>().cashPerRound *= 2.5f;
 
+        // Buff confirmation
         if (hero.tier == 20) ModHelper.Msg<HeroesBuff>("Buffing " + hero.baseId + "...");
         return;
     }

@@ -3,7 +3,7 @@ namespace HeroesBuff;
 public static class ModHelperData
 {
     public const string WorksOnVersion = "53.0";
-    public const string Version = "1.2.3";
+    public const string Version = "1.2.4";
     public const string Name = "HeroesBuff";
 
     public const string Description = "This mod improves the heroes (Sauda, Quincy and Benjamin only for now).";
