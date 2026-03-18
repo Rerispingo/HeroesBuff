@@ -1,9 +1,8 @@
 # HeroesBuff
-This mod improves the core mechanics of each hero (Sauda, Quincy and Benjamin only for now).
+This mod improves the heroes (Quincy, Gwendolin, Sauda and Benjamin only for now).
 
 ## Quincy Buffs :
-- Range increased by 50% up to level 14
-- Range increased by 75% starting at level 15
+- Range increased by 50%. 75% at level 15
 - Damage increased by 1 at Level 4
 - Damage increased by 2 at Level 15
 - Pierce increased by 1 at Level 2
@@ -13,6 +12,26 @@ This mod improves the core mechanics of each hero (Sauda, Quincy and Benjamin on
 - Cooldown reduced by 33%
 ### Storm of Arrows Ability:
 - Damage increased by 150%
+
+## Gwendolin Buffs :
+- Initial cost reduced by 85%
+- Range increase:
+    - 15% at level 1
+    - 35% at level 11
+- Burn damage increase:
+    - 200% at level 6
+    - 600% at level 16
+- Damage increase:
+    - 2 at level 1
+    - 4 at level 6
+    - 7 at level 12
+    - 9 at level 18
+- Attack speed increase:
+    - 15% at level 1
+    - 35% at level 10
+    - 65% at level 15
+### Cocktail of Fire
+- Cooldown reduced by 40%
 
 ## Sauda Buffs : 
 - Range increased by 20% on all levels
@@ -27,5 +46,5 @@ This mod improves the core mechanics of each hero (Sauda, Quincy and Benjamin on
 - Ability duration increased by 50%
 
 ## Benjamin Buffs :
-- Cost reduced by 400
+- Initial cost reduced by 450
 - Cash per round increased by 150%

@@ -1,1 +1,1 @@
-This mod improves the heroes (Sauda, Quincy and Benjamin only for now).
+This mod improves the heroes (Quincy, Gwendolin, Sauda and Benjamin only for now).

@@ -1,14 +1,21 @@
-# Changes : 
+# New Buffs for Heroes:
 
-## Quincy :
-Quincy has received buffs to his “Rapid Shot” and “Storm of Arrows” abilities, as well as increased range; and general nerfs to balance the game
-
-- Damage bonus removed at level 10 (was +1)
-- Penetration bonus removed at level 9 (was +2)
-- Ability to pop lead and frozen bloons moved to level 5 (was level 4)
-- Range bonus increased to 50% (previously 40%)
-- At level 15, the range bonus is increased to 75%
-### Rapid Shot Ability:
-- Cooldown reduced by 33%
-### Storm of Arrows Ability:
-- Damage increased by 150%
+## Gwendolin Buffs :
+- Initial cost reduced by 85%
+- Range increase:
+    - 15% at level 1
+    - 35% at level 11
+- Burn damage increase:
+    - 200% at level 6
+    - 600% at level 16
+- Damage increase:
+    - 2 at level 1
+    - 4 at level 6
+    - 7 at level 12
+    - 9 at level 18
+- Attack speed increase:
+    - 15% at level 1
+    - 35% at level 10
+    - 65% at level 15
+### Cocktail of Fire
+- Cooldown reduced by 40%
