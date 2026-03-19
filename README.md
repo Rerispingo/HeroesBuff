@@ -1,7 +1,7 @@
 # HeroesBuff
 This mod improves the heroes (Quincy, Gwendolin, Sauda and Benjamin only for now).
 
-## Quincy Buffs :
+## <span style="color:#9999dd"> Quincy Buffs : </span>
 - Range increased by 50%. 75% at level 15
 - Damage increased by 1 at Level 4
 - Damage increased by 2 at Level 15
@@ -13,7 +13,7 @@ This mod improves the heroes (Quincy, Gwendolin, Sauda and Benjamin only for now
 ### Storm of Arrows Ability:
 - Damage increased by 150%
 
-## Gwendolin Buffs :
+## <span style="color:#9999dd"> Gwendolin Buffs : </span>
 - Initial cost reduced by 85%
 - Range increase:
     - 25% at level 1
@@ -33,7 +33,7 @@ This mod improves the heroes (Quincy, Gwendolin, Sauda and Benjamin only for now
 ### Cocktail of Fire
 - Cooldown reduced by 40%
 
-## Sauda Buffs : 
+## <span style="color:#9999dd"> Sauda Buffs : </span>
 - Range increased by 20% on all levels
 - Damage increased by 2 at Level 10
 - Damage increased by 1 at Level 20
@@ -46,6 +46,10 @@ This mod improves the heroes (Quincy, Gwendolin, Sauda and Benjamin only for now
 - Continuous damage increased by 100%
 - Ability duration increased by 50%
 
-## Benjamin Buffs :
+## <span style="color:#9999dd"> Benjamin Buffs : </span>
 - Initial cost reduced by 450
 - Cash per round increased by 150%
+
+
+## <span style="color:#00dd99"> Mod Settings : </span>
+- Enable / Disable buffs (customizable for each hero).
