@@ -16,29 +16,30 @@ This mod improves the heroes (Quincy, Gwendolin, Sauda and Benjamin only for now
 ## Gwendolin Buffs :
 - Initial cost reduced by 85%
 - Range increase:
-    - 15% at level 1
-    - 35% at level 11
+    - 25% at level 1
+    - 40% at level 11
 - Burn damage increase:
-    - 200% at level 6
+    - 300% at level 6
     - 600% at level 16
 - Damage increase:
     - 2 at level 1
     - 4 at level 6
-    - 7 at level 12
-    - 9 at level 18
+    - 5 at level 12
+    - 6 at level 18
 - Attack speed increase:
-    - 15% at level 1
-    - 35% at level 10
-    - 65% at level 15
+    - 25% at level 1
+    - 75% at level 10
+    - 100% at level 15
 ### Cocktail of Fire
 - Cooldown reduced by 40%
 
 ## Sauda Buffs : 
 - Range increased by 20% on all levels
 - Damage increased by 2 at Level 10
-- Damage increased by 2 at Level 20
+- Damage increased by 1 at Level 20
 - Pierce increased by 1 on all levels
 - Attack speed increased by 10% * level (Ex: 50% at level 5)
+
 ### Leaping Sword Ability Buffs :
 - Cooldown reduced by 50%
 - Impact damage increased by 400%

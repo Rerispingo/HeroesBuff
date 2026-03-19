@@ -102,8 +102,8 @@ public class HeroesBuff : BloonsTD6Mod
         hero.cost *= 1f - 0.85f;
 
         // Range Buff
-        if (hero.tier < 11) hero.range *= 1f + 0.15f;
-        else hero.range *= 1f + 0.35f;
+        if (hero.tier < 11) hero.range *= 1f + 0.25f;
+        else hero.range *= 1f + 0.40f;
 
         // Burn Damage Buff
         if (hero.tier >= 6)
@@ -121,18 +121,18 @@ public class HeroesBuff : BloonsTD6Mod
             weaponModel.projectile.GetDamageModel().damage += 2f;
             if (hero.tier >= 12)
             {
-                weaponModel.projectile.GetDamageModel().damage += 3f;
+                weaponModel.projectile.GetDamageModel().damage += 1f;
                 if (hero.tier >= 18)
                 {
-                    weaponModel.projectile.GetDamageModel().damage *= 2f;
+                    weaponModel.projectile.GetDamageModel().damage *= 1f;
                 }
             }
         }
 
         //Attack Speed Buffs
-        if (hero.tier < 10) weaponModel.rate /= 1f + 0.15f;
-        else if (hero.tier < 15) weaponModel.rate /= 1f + 0.35f;
-        else weaponModel.rate /= 1f + 0.65f;
+        if (hero.tier < 10) weaponModel.rate /= 1f + 0.25f;
+        else if (hero.tier < 15) weaponModel.rate /= 1f + 75f;
+        else weaponModel.rate /= 1f + 1f;
 
         //Cocktail Ability Buffs   
         if (hero.tier >= 3)
@@ -156,7 +156,7 @@ public class HeroesBuff : BloonsTD6Mod
         hero.GetAttackModel().range *= 1.2f;
         
         if (hero.tier >= 10) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 2;
-        if (hero.tier >= 20) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 2;
+        if (hero.tier >= 20) hero.GetAttackModel().weapons[0].projectile.GetDamageModel().damage += 1;
         
         hero.GetAttackModel().weapons[0].projectile.pierce += 1;
         hero.GetAttackModel().weapons[0].Rate /= rateMultiplier;
